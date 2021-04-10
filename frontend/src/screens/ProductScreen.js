@@ -12,7 +12,7 @@ const ProductScreen = ({match}) => {
           setProduct(res.data)
         }
         fetchProduct()
-      
+      console.log(match.params.id)
     },[match])
     return (
         <>
