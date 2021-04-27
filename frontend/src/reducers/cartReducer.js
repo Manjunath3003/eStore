@@ -12,7 +12,7 @@ export const cartReducer=(state = {cartItems:[]}, action)=>{
             return{
                 //replacing the existing item with the new item
                 ...state,
-                cartItems:state.cartItems.map(x=>x.product === item.product ? item : x)
+                cartItems: state.cartItems.map(x=>x.product === existItem.product ? item : x)
             }
         }else{
             return{

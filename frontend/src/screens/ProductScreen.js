@@ -10,7 +10,7 @@ import Message from '../components/Message'
 const ProductScreen = ({match,history}) => {
 
     //quantity in the cart is component level state
-    const [qty,setQty]= useState(0)
+    const [qty,setQty]= useState(1)
 
     const dispatch = useDispatch()
     const productDetails= useSelector((state)=>state.productDetails)
