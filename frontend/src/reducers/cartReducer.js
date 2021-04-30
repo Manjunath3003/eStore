@@ -6,13 +6,13 @@ export const cartReducer=(state = {cartItems:[]}, action)=>{
        
         const item = action.payload
          //If the item already present
-        const existItem = state.cartItems.find(x=>x.product === item.product)
+        const existItem = state.cartItems.find(x=>x.product_id === item.product_id)
 
         if(existItem){
             return{
                 //replacing the existing item with the new item
                 ...state,
-                cartItems: state.cartItems.map(x=>x.product === existItem.product ? item : x)
+                cartItems: state.cartItems.map(x=>x.product_id === existItem.product_id ? item : x)
             }
         }else{
             return{
